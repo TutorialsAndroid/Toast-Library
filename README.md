@@ -6,6 +6,22 @@
 
 ---
 
+# ❤️ Support the Project
+
+If you find **ToastLib** useful, please consider supporting the project:
+
+⭐ Star this repository  
+🐛 Report issues  
+💡 Suggest new features
+
+And don’t forget to follow me on Instagram for more developer content:
+
+📸 https://instagram.com/coderx09
+
+Thanks for your support! 🚀
+
+---
+
 ## ✨ Features
 
 * ✅ Success / Error / Info / Default toast variants
