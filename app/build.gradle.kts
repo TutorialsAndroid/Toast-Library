@@ -16,8 +16,8 @@ android {
         applicationId = "com.app.toast"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
 
     implementation(project(":toastlibrary"))
+//    implementation("com.github.TutorialsAndroid:Toast-Library:v1.0.0")
 }

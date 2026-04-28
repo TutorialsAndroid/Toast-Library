@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Toast</string>
+    <string name="btn_success">Success Toast</string>
+    <string name="btn_error">Error Toast</string>
+    <string name="btn_info">Info Toast</string>
+    <string name="btn_default">Default Toast</string>
+    <string name="toast_lib_version">Toast Lib Version: 2.0.0</string>
 </resources>
