@@ -51,7 +51,7 @@ dependencyResolutionManagement {
 
 ```toml
 [versions]
-toastlib = "2.0.0"
+toastlib = "v2.0.0"
 
 [libraries]
 toastlib = { module = "com.github.TutorialsAndroid:toastlibrary", version.ref = "toastlib" }
@@ -73,7 +73,7 @@ Add inside **app/build.gradle.kts**
 
 ```kotlin
 dependencies {
-    implementation("com.github.TutorialsAndroid:toastlibrary:2.0.0")
+    implementation("com.github.TutorialsAndroid:toastlibrary:v2.0.0")
 }
 ```
 

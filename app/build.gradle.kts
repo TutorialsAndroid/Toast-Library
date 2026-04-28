@@ -45,5 +45,5 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
 
     implementation(project(":toastlibrary"))
-//    implementation("com.github.TutorialsAndroid:Toast-Library:v2.0.0")
+//    implementation(libs.toast.library)
 }
