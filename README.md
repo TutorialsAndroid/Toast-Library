@@ -9,9 +9,9 @@
 
 ---
 
-## 🚀 What is new in v3.0.0
+## 🚀 What is new in v3.0.1
 
-ToastLib v3.0.0 is a major feature upgrade focused on customization, API flexibility, and production-ready behavior.
+ToastLib v3.0.1 is a major feature upgrade focused on customization, API flexibility, and production-ready behavior.
 
 ### New features
 
@@ -107,7 +107,7 @@ Add this inside `gradle/libs.versions.toml`:
 
 ```toml
 [versions]
-toastlib = "v3.0.0"
+toastlib = "v3.0.1"
 
 [libraries]
 toastlib = { module = "com.github.TutorialsAndroid:toastlibrary", version.ref = "toastlib" }
@@ -127,7 +127,7 @@ Kotlin DSL:
 
 ```kotlin
 dependencies {
-    implementation("com.github.TutorialsAndroid:toastlibrary:v3.0.0")
+    implementation("com.github.TutorialsAndroid:toastlibrary:v3.0.1")
 }
 ```
 
@@ -135,7 +135,7 @@ Groovy:
 
 ```gradle
 dependencies {
-    implementation 'com.github.TutorialsAndroid:toastlibrary:v3.0.0'
+    implementation 'com.github.TutorialsAndroid:toastlibrary:v3.0.1'
 }
 ```
 
@@ -294,7 +294,7 @@ ToastLib.builder(this)
 
 # 🧼 Cancel Current Toast
 
-ToastLib v3.0.0 automatically cancels the previous toast before showing a new one. You can also manually cancel it:
+ToastLib v3.0.1 automatically cancels the previous toast before showing a new one. You can also manually cancel it:
 
 ```java
 ToastLib.cancelCurrent();
@@ -351,7 +351,7 @@ Project
 
 ---
 
-# 🧱 Migration from v2.0.0 to v3.0.0
+# 🧱 Migration from v2.0.0 to v3.0.1
 
 No breaking changes for basic usage.
 
