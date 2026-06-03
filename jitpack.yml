@@ -2,4 +2,4 @@ jdk:
   - openjdk17
 
 install:
-  - ./gradlew clean :library:publishToMavenLocal -x test
+  - ./gradlew clean :toastlibrary:publishToMavenLocal -x test
