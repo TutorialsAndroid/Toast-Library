@@ -4,8 +4,8 @@ plugins {
 }
 group= "com.github.TutorialsAndroid"
 
-extra["PUBLISH_GROUP_ID"] = "io.github.TutorialsAndroid"
-extra["PUBLISH_VERSION"] = "3.0.6"
+extra["PUBLISH_GROUP_ID"] = "io.github.tutorialsandroid"
+extra["PUBLISH_VERSION"] = "3.0.8"
 extra["PUBLISH_ARTIFACT_ID"] = "Toast-Library"
 
 extra["PUBLISH_DESCRIPTION"] = "ToastLib is a lightweight Android library that provides customizable, modern toast messages with icons, colors, gravity control, and clean API usage. It works reliably on Android 11+ using custom layouts instead of deprecated system toast styling."
@@ -14,7 +14,7 @@ extra["PUBLISH_URL"] = "https://github.com/TutorialsAndroid/Toast-Library"
 extra["PUBLISH_LICENSE_NAME"] = "Apache License"
 extra["PUBLISH_LICENSE_URL"] = "https://github.com/TutorialsAndroid/Toast-Library/blob/master/LICENSE"
 
-extra["PUBLISH_DEVELOPER_ID"] = "TutorialsAndroid"
+extra["PUBLISH_DEVELOPER_ID"] = "tutorialsandroid"
 extra["PUBLISH_DEVELOPER_NAME"] = "Akshay Masram"
 extra["PUBLISH_DEVELOPER_EMAIL"] = "akshaysunilmasram@yahoo.com"
 
