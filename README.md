@@ -11,9 +11,9 @@
 
 ---
 
-## 🚀 What is new in v3.0.1
+## 🚀 What is new in v3.0.11
 
-ToastLib v3.0.1 is a major feature upgrade focused on customization, API flexibility, and production-ready behavior.
+ToastLib v3.0.11 is a major feature upgrade focused on customization, API flexibility, and production-ready behavior.
 
 ### New features
 
@@ -109,7 +109,7 @@ Add this inside `gradle/libs.versions.toml`:
 
 ```toml
 [versions]
-toastlib = "v3.0.1"
+toastlib = "v3.0.11"
 
 [libraries]
 toastlib = { module = "com.github.TutorialsAndroid:toastlibrary", version.ref = "toastlib" }
@@ -129,7 +129,7 @@ Kotlin DSL:
 
 ```kotlin
 dependencies {
-    implementation("com.github.TutorialsAndroid:toastlibrary:v3.0.1")
+    implementation("com.github.TutorialsAndroid:toastlibrary:v3.0.11")
 }
 ```
 
@@ -137,7 +137,7 @@ Groovy:
 
 ```gradle
 dependencies {
-    implementation 'com.github.TutorialsAndroid:toastlibrary:v3.0.1'
+    implementation 'com.github.TutorialsAndroid:toastlibrary:v3.0.11'
 }
 ```
 
