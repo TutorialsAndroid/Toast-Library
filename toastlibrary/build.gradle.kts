@@ -5,7 +5,7 @@ plugins {
 group= "com.github.TutorialsAndroid"
 
 extra["PUBLISH_GROUP_ID"] = "io.github.TutorialsAndroid"
-extra["PUBLISH_VERSION"] = "3.0.3"
+extra["PUBLISH_VERSION"] = "3.0.5"
 extra["PUBLISH_ARTIFACT_ID"] = "Toast-Library"
 
 extra["PUBLISH_DESCRIPTION"] = "ToastLib is a lightweight Android library that provides customizable, modern toast messages with icons, colors, gravity control, and clean API usage. It works reliably on Android 11+ using custom layouts instead of deprecated system toast styling."
@@ -57,4 +57,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
 }
-apply(from = "${rootProject.projectDir}/scripts/publish-module.gradle")
+apply(from = "${rootDir}/scripts/publish-module.gradle")

@@ -4,4 +4,4 @@ plugins {
     alias(libs.plugins.android.library) apply false
 }
 
-apply(from = "${rootProject.projectDir}/scripts/publish-root.gradle")
+apply(from = "${rootDir}/scripts/publish-root.gradle")

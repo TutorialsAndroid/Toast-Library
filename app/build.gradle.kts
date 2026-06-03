@@ -16,8 +16,8 @@ android {
         applicationId = "com.app.toast"
         minSdk = 24
         targetSdk = 36
-        versionCode = 5
-        versionName = "3.0.3"
+        versionCode = 6
+        versionName = "3.0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
