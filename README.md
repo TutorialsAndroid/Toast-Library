@@ -2,10 +2,12 @@
 
 # ToastLib
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/toastlibrary?label=Maven%20Central&color=success)](https://central.sonatype.com/artifact/io.github.tutorialsandroid/toastlibrary)
 [![](https://jitpack.io/v/TutorialsAndroid/Toast-Library.svg)](https://jitpack.io/#TutorialsAndroid/Toast-Library)
 ![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg)
 ![Language](https://img.shields.io/badge/language-Java-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.11-blueviolet.svg)
 
 **ToastLib** is a lightweight Android Java library for modern, icon-based custom toast messages. It provides clean static APIs, a powerful builder API, custom icons, custom colors, gravity control, duration control, and safe one-toast-at-a-time behavior.
 
@@ -53,9 +55,17 @@ ToastLib v3.0.11 is a major feature upgrade focused on customization, API flexib
 
 # 📦 Installation
 
-ToastLib is available through **JitPack**.
+ToastLib is available through both **Maven Central** and **JitPack**.
 
-## Step 1: Add JitPack repository
+Maven Central is recommended for production projects.
+
+---
+
+## Option 1: Maven Central Recommended
+
+Maven Central does not require adding any extra repository if your project already uses `mavenCentral()`.
+
+### Step 1: Add Maven Central repository
 
 Add this inside your root `settings.gradle.kts`:
 
@@ -64,6 +74,97 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+````
+
+For Groovy `settings.gradle`:
+
+```gradle
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+```
+
+---
+
+### Step 2: Add ToastLib dependency
+
+#### Version catalog
+
+Add this inside `gradle/libs.versions.toml`:
+
+```toml
+[versions]
+toastlib = "3.0.11"
+
+[libraries]
+toastlib = { module = "io.github.tutorialsandroid:toastlibrary", version.ref = "toastlib" }
+```
+
+Then add this inside your app module `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation(libs.toastlib)
+}
+```
+
+#### Direct dependency
+
+Kotlin DSL:
+
+```kotlin
+dependencies {
+    implementation("io.github.tutorialsandroid:toastlibrary:3.0.11")
+}
+```
+
+Groovy:
+
+```gradle
+dependencies {
+    implementation 'io.github.tutorialsandroid:toastlibrary:3.0.11'
+}
+```
+
+---
+
+## Option 2: JitPack Alternative
+
+Use JitPack if you want to consume the library directly from GitHub releases.
+
+### Step 1: Add JitPack repository
+
+Add this inside your root `settings.gradle.kts`:
+
+```kotlin
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
         maven("https://jitpack.io")
     }
 }
@@ -85,6 +186,7 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
         maven { url 'https://jitpack.io' }
     }
 }
@@ -101,21 +203,19 @@ dependencyResolutionManagement {
 
 ---
 
-## Step 2: Add dependency
+### Step 2: Add JitPack dependency
 
-### Version catalog
-
-Add this inside `gradle/libs.versions.toml`:
+#### Version catalog
 
 ```toml
 [versions]
 toastlib = "v3.0.11"
 
 [libraries]
-toastlib = { module = "com.github.TutorialsAndroid:toastlibrary", version.ref = "toastlib" }
+toastlib = { module = "com.github.TutorialsAndroid:Toast-Library", version.ref = "toastlib" }
 ```
 
-Then add this inside your app module `build.gradle.kts`:
+Then use:
 
 ```kotlin
 dependencies {
@@ -123,13 +223,13 @@ dependencies {
 }
 ```
 
-### Direct dependency
+#### Direct dependency
 
 Kotlin DSL:
 
 ```kotlin
 dependencies {
-    implementation("com.github.TutorialsAndroid:toastlibrary:v3.0.11")
+    implementation("com.github.TutorialsAndroid:Toast-Library:v3.0.11")
 }
 ```
 
@@ -137,9 +237,11 @@ Groovy:
 
 ```gradle
 dependencies {
-    implementation 'com.github.TutorialsAndroid:toastlibrary:v3.0.11'
+    implementation 'com.github.TutorialsAndroid:Toast-Library:v3.0.11'
 }
 ```
+
+Important: for Maven Central, use version **`3.0.11`** without `v`. For JitPack, use tag **`v3.0.11`** with `v`.
 
 ---
 
