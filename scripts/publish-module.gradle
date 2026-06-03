@@ -4,7 +4,9 @@ apply plugin: 'signing'
 group = PUBLISH_GROUP_ID
 version = PUBLISH_VERSION
 
-def isJitPack = System.getenv("JITPACK") == "true"
+def isPublishToMavenLocal = gradle.startParameter.taskNames.any {
+    it.toLowerCase().contains("publishtomavenlocal")
+}
 
 afterEvaluate {
     publishing {
@@ -48,27 +50,25 @@ afterEvaluate {
         }
     }
 
-    def hasSigningKeys =
-            project.hasProperty("signing.keyId") &&
-                    project.hasProperty("signing.password") &&
-                    project.hasProperty("signing.secretKeyRingFile") &&
-                    project.property("signing.keyId") &&
-                    project.property("signing.password") &&
-                    project.property("signing.secretKeyRingFile")
+    def hasSigningKeys = [
+            project.findProperty("signing.keyId"),
+            project.findProperty("signing.password"),
+            project.findProperty("signing.secretKeyRingFile")
+    ].every {
+        it != null && it.toString().trim().length() > 0
+    }
 
-    signing {
-        required {
-            !isJitPack &&
-                    hasSigningKeys &&
-                    !version.toString().endsWith("SNAPSHOT")
+    def shouldSign = hasSigningKeys &&
+            !isPublishToMavenLocal &&
+            !version.toString().endsWith("SNAPSHOT")
+
+    if (shouldSign) {
+        signing {
+            sign publishing.publications.release
         }
-
-        sign publishing.publications.release
     }
 
     tasks.withType(Sign).configureEach {
-        onlyIf {
-            !isJitPack && hasSigningKeys
-        }
+        enabled = shouldSign
     }
 }
