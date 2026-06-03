@@ -1,9 +1,27 @@
-import org.gradle.api.publish.maven.MavenPublication
 plugins {
     alias(libs.plugins.android.library)
     id("maven-publish")
 }
 group= "com.github.TutorialsAndroid"
+
+extra["PUBLISH_GROUP_ID"] = "io.github.TutorialsAndroid"
+extra["PUBLISH_VERSION"] = "3.0.2"
+extra["PUBLISH_ARTIFACT_ID"] = "Toast-Library"
+
+extra["PUBLISH_DESCRIPTION"] = "ToastLib is a lightweight Android library that provides customizable, modern toast messages with icons, colors, gravity control, and clean API usage. It works reliably on Android 11+ using custom layouts instead of deprecated system toast styling."
+extra["PUBLISH_URL"] = "https://github.com/TutorialsAndroid/Toast-Library"
+
+extra["PUBLISH_LICENSE_NAME"] = "Apache License"
+extra["PUBLISH_LICENSE_URL"] = "https://github.com/TutorialsAndroid/Toast-Library/blob/master/LICENSE"
+
+extra["PUBLISH_DEVELOPER_ID"] = "TutorialsAndroid"
+extra["PUBLISH_DEVELOPER_NAME"] = "Akshay Masram"
+extra["PUBLISH_DEVELOPER_EMAIL"] = "akshaysunilmasram@yahoo.com"
+
+extra["PUBLISH_SCM_CONNECTION"] = "scm:git:github.com/TutorialsAndroid/Toast-Library.git"
+extra["PUBLISH_SCM_DEVELOPER_CONNECTION"] =
+    "scm:git:ssh://github.com/TutorialsAndroid/Toast-Library.git"
+extra["PUBLISH_SCM_URL"] = "https://github.com/TutorialsAndroid/Toast-Library/tree/master"
 
 android {
     namespace = "com.app.toastlibrary"
@@ -32,21 +50,6 @@ android {
 
 }
 
-// Wrap publishing in afterEvaluate to ensure components are created
-afterEvaluate {
-    publishing {
-        publications {
-            register<MavenPublication>("release") {
-                from(components["release"])
-
-                groupId = "com.github.TutorialsAndroid"
-                artifactId = "toastlibrary"
-                version = "3.0.1"
-            }
-        }
-    }
-}
-
 dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -54,3 +57,4 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
 }
+apply(from = "${rootProject.projectDir}/scripts/publish-module.gradle")
