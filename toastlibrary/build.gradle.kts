@@ -5,8 +5,8 @@ plugins {
 group= "com.github.TutorialsAndroid"
 
 extra["PUBLISH_GROUP_ID"] = "io.github.tutorialsandroid"
-extra["PUBLISH_VERSION"] = "3.0.8"
-extra["PUBLISH_ARTIFACT_ID"] = "Toast-Library"
+extra["PUBLISH_VERSION"] = "3.0.9"
+extra["PUBLISH_ARTIFACT_ID"] = "toastlibrary"
 
 extra["PUBLISH_DESCRIPTION"] = "ToastLib is a lightweight Android library that provides customizable, modern toast messages with icons, colors, gravity control, and clean API usage. It works reliably on Android 11+ using custom layouts instead of deprecated system toast styling."
 extra["PUBLISH_URL"] = "https://github.com/TutorialsAndroid/Toast-Library"
