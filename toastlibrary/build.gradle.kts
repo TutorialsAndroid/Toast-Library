@@ -5,11 +5,11 @@ plugins {
 group= "com.github.TutorialsAndroid"
 
 extra["PUBLISH_GROUP_ID"] = "io.github.tutorialsandroid"
-extra["PUBLISH_VERSION"] = "3.0.9"
+extra["PUBLISH_VERSION"] = "3.0.10"
 extra["PUBLISH_ARTIFACT_ID"] = "toastlibrary"
 
 extra["PUBLISH_DESCRIPTION"] = "ToastLib is a lightweight Android library that provides customizable, modern toast messages with icons, colors, gravity control, and clean API usage. It works reliably on Android 11+ using custom layouts instead of deprecated system toast styling."
-extra["PUBLISH_URL"] = "https://github.com/TutorialsAndroid/Toast-Library"
+extra["PUBLISH_URL"] = "https://github.com/tutorialsandroid/Toast-Library"
 
 extra["PUBLISH_LICENSE_NAME"] = "Apache License"
 extra["PUBLISH_LICENSE_URL"] = "https://github.com/TutorialsAndroid/Toast-Library/blob/master/LICENSE"
@@ -18,10 +18,10 @@ extra["PUBLISH_DEVELOPER_ID"] = "tutorialsandroid"
 extra["PUBLISH_DEVELOPER_NAME"] = "Akshay Masram"
 extra["PUBLISH_DEVELOPER_EMAIL"] = "akshaysunilmasram@yahoo.com"
 
-extra["PUBLISH_SCM_CONNECTION"] = "scm:git:github.com/TutorialsAndroid/Toast-Library.git"
+extra["PUBLISH_SCM_CONNECTION"] = "scm:git:github.com/tutorialsandroid/Toast-Library.git"
 extra["PUBLISH_SCM_DEVELOPER_CONNECTION"] =
-    "scm:git:ssh://github.com/TutorialsAndroid/Toast-Library.git"
-extra["PUBLISH_SCM_URL"] = "https://github.com/TutorialsAndroid/Toast-Library/tree/master"
+    "scm:git:ssh://github.com/tutorialsandroid/Toast-Library.git"
+extra["PUBLISH_SCM_URL"] = "https://github.com/tutorialsandroid/Toast-Library/tree/master"
 
 android {
     namespace = "com.app.toastlibrary"
